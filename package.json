@@ -1,15 +1,15 @@
 {
-  "name": "nodejs-complete-guide",
+  "name": "nodejs-shop-mysql",
   "version": "1.0.0",
-  "description": "Complete Node.js Guide",
+  "description": "Node.js with MySQL",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
     "start-server": "node app.js"
   },
-  "author": "Maximilian Schwarzmüller",
-  "license": "ISC",
+  "author": "Adriano Machado",
+  "license": "MIT",
   "devDependencies": {
     "nodemon": "^1.18.3"
   },

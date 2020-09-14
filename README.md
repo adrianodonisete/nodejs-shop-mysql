@@ -6,7 +6,7 @@
   <a href="javascript:;">Demo</a>
 </div> -->
 
-<h1 align="center">Nodejs With MySQL</h1>
+<h1 align="center">Node.js With MySQL</h1>
 
 <p align="center">
   <!-- <img alt="Github top language" src="https://img.shields.io/github/languages/top/adrianodonisete/nodejs-complete-guide?color=56BEB8"> -->
@@ -27,7 +27,7 @@
 <!-- Status -->
 
 <!-- <h4 align="center"> 
-	🚧  Nodejs Complete Guide 🚀 Under construction...  🚧
+	🚧  Nodejs With MySQL 🚀 Under construction...  🚧
 </h4> 
 
 <hr> -->
@@ -46,7 +46,7 @@
 
 ## :dart: About ##
 
-Project NodeJS using MySQL
+Node.js using MySQL
 
 <!-- ## :sparkles: Features ##
 
@@ -59,6 +59,8 @@ Project NodeJS using MySQL
 The following tools were used in this project:
 
 - [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/)
+- [EJS](https://ejs.co/)
 - [MySQL](https://www.mysql.com/)
 
 ## :white_check_mark: Requirements ##
@@ -69,7 +71,7 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone this project
-$ git clone https://github.com/adrianodonisete/nodejs-complete-guide
+$ git clone https://github.com/adrianodonisete/nodejs-shop-mysql
 
 # Access
 $ cd nodejs-complete-guide
