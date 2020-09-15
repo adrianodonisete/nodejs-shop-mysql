@@ -26,11 +26,11 @@
 
 <!-- Status -->
 
-<!-- <h4 align="center"> 
-	🚧  Nodejs With MySQL 🚀 Under construction...  🚧
+<h4 align="center"> 
+	🚧  Node.js With MySQL 🚀 Under construction...  🚧
 </h4> 
 
-<hr> -->
+<hr>
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
@@ -62,6 +62,7 @@ The following tools were used in this project:
 - [Express](https://expressjs.com/)
 - [EJS](https://ejs.co/)
 - [MySQL](https://www.mysql.com/)
+- [Sequelize ORM](https://sequelize.org/)
 
 ## :white_check_mark: Requirements ##
 
