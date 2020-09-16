@@ -3,10 +3,13 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const errorController = require('./controllers/error');
+const errorController = require('./controllers/errorController');
 const sequelize = require('./util/database');
+
 const Product = require('./models/product');
 const User = require('./models/user');
+const Cart = require('./models/cart');
+const CartItem = require('./models/cart-item');
 
 const app = express();
 
@@ -33,28 +36,34 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 
-Product.belongsTo(User, {
-    constraints: true,
-    onDelete: 'CASCADE'
-});
+Product.belongsTo(User, { constraints: true, onDelete: 'CASCADE' });
 User.hasMany(Product);
+User.hasOne(Cart);
+Cart.belongsTo(User);
+Cart.belongsToMany(Product, { through: CartItem });
+Product.belongsToMany(Cart, { through: CartItem });
 
 sequelize
-    // .sync({force: true})
+    // .sync({ force: true })
     .sync()
-    .then(User.findByPk(1))
+    .then(result => {
+        return User.findByPk(1);
+        // console.log(result);
+    })
     .then(user => {
         if (!user) {
-            return User.create({
-                name: 'Adriano', email: 'teste@teste.com'
-            });
+            return User.create({ name: "Max", email: "test@test.com" });
         }
-        return Promise.resolve(user);
+        return user;
+    })
+    .then(user => {
+        // console.log(user);
+        return user.createCart();
     })
     .then(user => {
         // console.log(user);
         app.listen(3000, () => console.log(`Listen at http://localhost:3000/`));
     })
     .catch(err => {
-        console.log(['erro1', err]);
+        console.log(["erro1", err]);
     }); 
